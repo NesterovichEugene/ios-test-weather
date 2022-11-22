@@ -5,6 +5,8 @@ class MainViewController: UIViewController, MainViewProtocol {
     private let presenter: MainPresenterProtocol = MainPresenter()
     private let cellIdentifier: String = "TableCell"
     
+    // MARK: - UI Components
+    
     private lazy var cityLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -91,6 +93,8 @@ class MainViewController: UIViewController, MainViewProtocol {
         return tableView
     }()
     
+    // MARK: - Overridings
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -103,6 +107,8 @@ class MainViewController: UIViewController, MainViewProtocol {
         self.setupConstraints()
         self.presenter.fetchWeatherData()
     }
+    
+    // MARK: - Public methods
     
     public func setCityText(_ text: String) {
         self.cityLabel.text = text
