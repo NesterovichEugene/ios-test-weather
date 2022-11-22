@@ -4,6 +4,9 @@ import UIKit
 class DailyWeatherView: UIView {
     
     public func configureWeatherView(_ weather: WeatherPerDay) {
+        
+        // MARK: - Create UI components
+        
         let dayLabel: UILabel = {
             let label = UILabel()
             label.font = Fonts.inter14
@@ -34,6 +37,8 @@ class DailyWeatherView: UIView {
         self.addSubview(dayLabel)
         self.addSubview(weatherIcon)
         self.addSubview(temperatureLabel)
+        
+        // MARK: - Setup constraints
         
         dayLabel.translatesAutoresizingMaskIntoConstraints = false
         dayLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true

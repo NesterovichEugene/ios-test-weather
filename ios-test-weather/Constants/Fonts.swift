@@ -1,7 +1,6 @@
 import UIKit
 
 enum Fonts {
-    
     static var inter30: UIFont? {
         UIFont(name: "Inter-Medium", size: 30)
     }
